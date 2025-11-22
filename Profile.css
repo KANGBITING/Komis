@@ -1,0 +1,243 @@
+  /* Background gradient hitam ke merah */
+  body {
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+    background: linear-gradient(135deg, #000000, #75020f);
+    color: #fff;
+  }
+
+  /* Container utama */
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 30px;
+  }
+
+  /* Hero Section */
+  .hero {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 20px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .hero-content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+  }
+
+  /* ✅ gambar proporsional dan responsif */
+  .hero-img {
+    width: 100%;
+    max-width: 400px;
+    height: auto; /* biar gak gepeng */
+    border-radius: 20px;
+    object-fit: contain; /* tetap proporsional */
+    box-shadow: 0 0 20px rgba(255, 0, 0, 0.4);
+    transition: transform 0.3s ease;
+  }
+
+  .hero-img:hover {
+    transform: scale(1.03);
+  }
+
+  .hero-text {
+    max-width: 500px;
+    text-align: left;
+  }
+
+  .hero-text h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+  }
+
+  .hero-text p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    margin-bottom: 20px;
+  }
+
+  .read-more {
+    background: #75020f;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 12px;
+    transition: background 0.3s;
+  }
+
+  .read-more:hover {
+    background: #9b0413;
+  }
+
+  /* Artworks Section */
+  .artworks {
+    margin-top: 50px;
+    text-align: center;
+  }
+
+  .artwork-grid {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+
+  .artwork-grid img {
+    width: 100%;
+    max-width: 250px;
+    height: auto;
+    border-radius: 20px;
+    transition: transform 0.3s;
+    object-fit: cover;
+  }
+
+  .artwork-grid img:hover {
+    transform: scale(1.05);
+  }
+
+  .view-more {
+  margin-top: 30px;
+  background: #75020f;
+  border: none;
+  padding: 12px 30px;
+  border-radius: 12px;
+  color: #fff;
+  cursor: pointer;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.view-more:hover {
+  background: #9b0413;
+  transform: scale(1.05);
+}
+
+  /* Recent Searches */
+  .recent {
+    margin-top: 60px;
+  }
+
+  .search-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 20px;
+  }
+
+  .search-tags button {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid #75020f;
+    color: #fff;
+    padding: 10px 15px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+
+  .search-tags button:hover {
+    background: rgba(255, 0, 0, 0.3);
+  }
+
+  /* Info Cards */
+  .info {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    margin-top: 60px;
+  }
+
+  .info-card {
+    background: rgba(255, 255, 255, 0.08);
+    border-left: 4px solid #75020f;
+    padding: 20px;
+    border-radius: 16px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  }
+
+  .info-card h3 {
+    margin-top: 0;
+    color: #ff5a5a;
+  }
+
+  .info-card p {
+    line-height: 1.6;
+  }
+
+  /* ✅ Responsif untuk layar kecil */
+  @media (max-width: 768px) {
+    .hero-content {
+      flex-direction: column;
+      text-align: center;
+    }
+
+    .hero-text {
+      max-width: 100%;
+    }
+
+    .hero-text h1 {
+      font-size: 2em;
+    }
+
+    .hero-img {
+      max-width: 300px;
+    }
+  }
+
+  /* ✅ Card Container */
+.card {
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 15px;
+  padding: 15px;
+  width: 200px;              /* Ukuran card */
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+/* ✅ Gambar kotak di dalam card */
+.card img {
+  width: 100%;
+  aspect-ratio: 1 / 1;       /* Biar persegi */
+  object-fit: cover;         /* Tidak gepeng */
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+/* ✅ Judul dan teks */
+.card h3 {
+  margin: 10px 0 5px;
+  font-size: 1.1em;
+}
+
+.card p {
+  font-size: 0.9em;
+  margin-bottom: 15px;
+  color: #ddd;
+}
+
+/* ✅ Tombol */
+.card .btn {
+  background: #75020f;
+  color: #fff;
+  padding: 8px 15px;
+  text-decoration: none;
+  border-radius: 10px;
+  font-size: 0.9em;
+  transition: background 0.3s;
+}
+
+.card .btn:hover {
+  background: #9b0413;
+}

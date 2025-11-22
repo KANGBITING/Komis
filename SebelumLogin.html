@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kang Biting Web</title>
+  <link rel="stylesheet" href="SebelumLogin.css">
+</head>
+<body>
+
+  <!--Header / Navbar -->
+  <header>
+    <nav class="navbar">
+      <div class="logo">vistART🎨</div>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Hero Section + Slider -->
+    <section class="hero-wrapper">  
+      
+      <!-- Hero text -->
+      <div class="hero-text">
+        <h2 class="title">100+ Artist yang telah bergabung disini!</h2>
+        <h3 class="subtitle">Semua fitur hadir untuk Artist pemula</h3>
+        <p class="description">
+            platform untuk menampilkan portofolio, membagikan karya, dan terhubung dengan sesama seniman.
+Pengguna dapat mengunggah ilustrasi, mendapatkan feedback, dan mengikuti komunitas kreatif.
+Ciptakan, bagikan, dan temukan inspirasi dari berbagai karya di seluruh dunia.
+        </p>
+        <div class="hero-buttons">
+          <a href="logIn.html" class="btn order">Login</a>
+          <a href="SignIn.html " class="btn contact">Sign In</a>
+        </div>
+      </div>
+
+      <!-- Slider -->
+      <div class="slider">
+        <div class="list">
+          <div class="item"><img src="Collab.jpeg" alt=""></div>
+          <div class="item"><img src="Buat gambar coding.jpeg" alt=""></div>
+          <div class="item"><img src="Kdj x Reira.jpeg" alt=""></div>
+          <div class="item"><img src="Sukuna.jpeg" alt=""></div>
+          <div class="item"><img src="Han vs Maru 2.jpeg" alt=""></div>
+        </div>
+
+        <!-- Dots -->
+        <ul class="dots">
+          <li class="active"></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <!-- Script slider -->
+  <script>
+    const slider = document.querySelector(".list");
+    const dots = document.querySelectorAll(".dots li");
+    let index = 0;
+
+    function updateSlider() {
+      slider.style.transform = `translateX(${-index * 100}%)`;
+      dots.forEach((dot, i) => {
+        dot.classList.toggle("active", i === index);
+      });
+    }
+
+    function nextSlide() {
+      index = (index + 1) % dots.length;
+      updateSlider();
+    }
+
+    dots.forEach((dot, i) => {
+      dot.addEventListener("click", () => {
+        index = i;
+        updateSlider();
+      });
+    });
+
+    setInterval(nextSlide, 3000);
+  </script>
+
+</body>
+</html>
